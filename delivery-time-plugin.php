@@ -65,6 +65,3 @@ function style_load(){
     wp_enqueue_style( 'myStyles', plugins_url( 'simple-style.css', __FILE__ ) );
 
 }
-
-
-?>
