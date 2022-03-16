@@ -24,12 +24,6 @@ add_action('wp_enqueue_scripts', 'style_load');
 use Carbon_Fields\Container;
 use Carbon_Fields\Field;
 
-add_action( 'after_setup_theme', 'crb_load' );
-function crb_load() {
-    require_once( 'vendor/autoload.php' );
-    \Carbon_Fields\Carbon_Fields::boot();
-}
-
 add_action( 'carbon_fields_register_fields', 'delivery_plugin_options' );
 function delivery_plugin_options() {
     Container::make( 'theme_options', __( 'Delivery time for shipping method' ) )
@@ -41,6 +35,27 @@ function delivery_plugin_options() {
                 Field::make( 'text', 'id', __( 'Input ID for Flate Rate method Shipping' ) ),
     ) ),
             ));
+}
+
+add_action( 'after_setup_theme', 'crb_load' );
+function crb_load() {
+    require_once( 'vendor/autoload.php' );
+    \Carbon_Fields\Carbon_Fields::boot();
+}
+
+
+function display ( $method, $index ) {
+
+    $option = carbon_get_theme_option( 'options' );
+
+    foreach ($option as $optione){
+       
+        if( $method->id == $optione['id'] ) {
+            $desc = $optione['comse'];
+            echo "<br> <small> $desc </small>";
+         }
+
+    }
 
 }
 
