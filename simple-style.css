@@ -1,0 +1,9 @@
+/* here you can put own style */
+
+#shipping_method li {
+    padding: 0.5rem 0rem;
+}
+
+small{
+    line-height: 2.5em;
+}
