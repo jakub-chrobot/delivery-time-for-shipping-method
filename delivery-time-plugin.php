@@ -57,7 +57,7 @@ function delivery_plugin_options() {
             Field::make( 'complex', 'options', __( 'Assign description to delivery method' ) )
             ->add_fields( array(
                 Field::make( 'rich_text', 'comse', __( 'Description' ) ),
-                Field::make( 'select', 'crb_select', __( 'Choose shipping method' ) )
+                Field::make( 'select', 'id', __( 'Choose shipping method' ) )
                 ->add_options( $result )
                 ) ),
                 ));
@@ -104,5 +104,3 @@ function delivermethods() {
      }
 
 }
- 
- 
