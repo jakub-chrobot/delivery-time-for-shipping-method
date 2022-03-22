@@ -1,8 +1,8 @@
 <?php
 /*
-Plugin Name:  Delivery time for shipping method - FLATE RATE
+Plugin Name:  Dodawanie opisów do wysyłek
 Plugin URI:   https://github.com/jakub-chrobot/delivery-time-for-shipping-method
-Description:  Plugin to help assign time delivery to shipping method - WORKS FOR ONLY FLATE RATE
+Description:  Plugin który pozwala dodać opis do metod wysyłek - <b> Działa tylko dla metod wysyłek dodanych za pomocą domyślnych ustawień - <span style="color:red;"> Flexible shipping mają własne pola do opisów </span> </b>
 Version:      0.1
 Author:       Jakub Chrobot
 Author URI:   https://jakubchrobot.pl
@@ -51,13 +51,13 @@ function delivery_plugin_options() {
 
      $result = array_combine($delivery_id, $delivery_name);
 
-    Container::make( 'theme_options', __( 'Delivery time for shipping method' ) )
+    Container::make( 'theme_options', __( 'Opisy metod wysyłek' ) )
         ->add_fields( array(
-            Field::make( 'separator', 'separator_one', __( 'Custom description to delivery method' ) ),
-            Field::make( 'complex', 'options', __( 'Assign description to delivery method' ) )
+            Field::make( 'separator', 'separator_one', __( 'Opisy' ) ),
+            Field::make( 'complex', 'options', __( 'Dodaj opis do metody wysyłki' ) )
             ->add_fields( array(
-                Field::make( 'rich_text', 'comse', __( 'Description' ) ),
-                Field::make( 'select', 'id', __( 'Choose shipping method' ) )
+                Field::make( 'rich_text', 'comse', __( 'Opis' ) ),
+                Field::make( 'select', 'id', __( 'Wybierz metodę wysyłki' ) )
                 ->add_options( $result )
                 ) ),
                 ));
