@@ -3,7 +3,7 @@
 Plugin Name:  Dodawanie opisów do wysyłek
 Plugin URI:   https://github.com/jakub-chrobot/delivery-time-for-shipping-method
 Description:  Plugin który pozwala dodać opis do metod wysyłek - <b> Działa tylko dla metod wysyłek dodanych za pomocą domyślnych ustawień - <span style="color:red;"> Flexible shipping mają własne pola do opisów </span> </b>
-Version:      0.1
+Version:      0.3
 Author:       Jakub Chrobot
 Author URI:   https://jakubchrobot.pl
 License:      GPL2
